@@ -160,6 +160,7 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
     
     df['frequent_com_sta'] = df['Start Station']+","+df['End Station']
+    #will combine both the columns to take input
     
     
     most_frequent_combination = df['frequent_com_sta'].mode()[0]
@@ -189,6 +190,7 @@ def trip_duration_stats(df):
     # TO DO: display mean travel time
     
     mean_travel_time = (df['Trip Duration'].mean()).round() 
+    #round()will give the rounded off float
        
     print("Average travel time is : ",mean_travel_time)
 
@@ -257,15 +259,15 @@ def user_stats(df):
 
 def raw_data_display(df):
 
-    i = 0
+    y = 0
     while True:
         raw_data = input("if you like to see raw data type yes else no : ").lower()
         if raw_data != 'yes'
 
         break
     else:
-        i = i+5
-        print(df.iloc[i:i+5])
+        y = y+5
+        print(df.iloc[y:y+5])
 
 
 
