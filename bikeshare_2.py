@@ -261,15 +261,15 @@ def user_stats(df):
 def raw_data_display(df):
     #it will display first 5 rows of raw data upon asked by user.
 
-    y = 0
+    i = 0
     while True:
         raw_data = input("if you like to see raw data type yes else no : ").lower()
         if raw_data != 'yes'
 
         break
     else:
-        y = y+5
-        print(df.iloc[y:y+5])
+        i = i+5
+        print(df.iloc[i:i+5])
 
 
 
