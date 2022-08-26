@@ -18,11 +18,11 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        
+        #while true is used to check every condition in infinite loop till it is true.
         
         
         city = input("select city name (chicago, new york city,washington) : ").lower()
-        if city in CITY_DATA.keys():
+        if city in CITY_DATA.keys():#keys() usedto get keys from dictionary file
             
             break
         else:
@@ -74,11 +74,14 @@ def load_data(city, month, day):
      df = pd.read_csv(CITY_DATA[city])
     
     df['Start Time'] = pd.to_datetime(df['Start Time'])
+    #converting the data to date time format
     
     df['month'] = df['Start Time'].dt.month 
+    #creating new column from start time column
     
     df['day_of_week'] = df['Start Time'].dt.weekday_name 
-        df['start hour'] = df['Start Time'].dt.hour 
+    #day_of_week column created
+    df['start hour'] = df['Start Time'].dt.hour 
     
     if month != 'all':
         
