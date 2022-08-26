@@ -18,11 +18,11 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        
+        #while true is used to check every condition in infinite loop till it is true.
         
         
         city = input("select city name (chicago, new york city,washington) : ").lower()
-        if city in CITY_DATA.keys():
+        if city in CITY_DATA.keys():#keys() usedto get keys from dictionary file
             
             break
         else:
@@ -74,11 +74,14 @@ def load_data(city, month, day):
      df = pd.read_csv(CITY_DATA[city])
     
     df['Start Time'] = pd.to_datetime(df['Start Time'])
+    #converting the data to date time format
     
     df['month'] = df['Start Time'].dt.month 
+    #creating new column from start time column
     
     df['day_of_week'] = df['Start Time'].dt.weekday_name 
-        df['start hour'] = df['Start Time'].dt.hour 
+    #day_of_week column created
+    df['start hour'] = df['Start Time'].dt.hour 
     
     if month != 'all':
         
@@ -157,6 +160,7 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
     
     df['frequent_com_sta'] = df['Start Station']+","+df['End Station']
+    #will combine both the columns to take input
     
     
     most_frequent_combination = df['frequent_com_sta'].mode()[0]
@@ -186,6 +190,7 @@ def trip_duration_stats(df):
     # TO DO: display mean travel time
     
     mean_travel_time = (df['Trip Duration'].mean()).round() 
+    #round()will give the rounded off float
        
     print("Average travel time is : ",mean_travel_time)
 
@@ -203,13 +208,14 @@ def user_stats(df):
     # TO DO: Display counts of user types
     
     user_types = df['User Type'].value_counts().to_frame()
+    #.value_counts will count unique values in a column
     
     print(user_types)
 
 
     # TO DO: Display counts of gender
     
-    
+    #try and except is used to avoid exceptional error during run 
     
     try:
         gender = df['Gender'].value_counts()
@@ -253,6 +259,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data_display(df):
+    #it will display first 5 rows of raw data upon asked by user.
 
     i = 0
     while True:
