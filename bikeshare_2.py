@@ -252,17 +252,17 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-#def raw_data_display(df):
+def raw_data_display(df):
 
-#    i = 0
- #   while True:
-  #      raw_data = input("if you like to see raw data type yes else no : ").lower()
-   #     if raw_data != 'yes'
+    i = 0
+    while True:
+        raw_data = input("if you like to see raw data type yes else no : ").lower()
+        if raw_data != 'yes'
 
-    #    break
-    #else:
-     #   i = i+5
-      #  print(df.iloc[i:i+5])
+        break
+    else:
+        i = i+5
+        print(df.iloc[i:i+5])
 
 
 
@@ -276,7 +276,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        #raw_data_display(df)
+        raw_data_display(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
