@@ -208,13 +208,14 @@ def user_stats(df):
     # TO DO: Display counts of user types
     
     user_types = df['User Type'].value_counts().to_frame()
+    #.value_counts will count unique values in a column
     
     print(user_types)
 
 
     # TO DO: Display counts of gender
     
-    
+    #try and except is used to avoid exceptional error during run 
     
     try:
         gender = df['Gender'].value_counts()
@@ -258,6 +259,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data_display(df):
+    #it will display first 5 rows of raw data upon asked by user.
 
     y = 0
     while True:
