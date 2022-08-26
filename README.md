@@ -1,4 +1,4 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+
 
 ### Date created
 This project was created on 24th august 2022.
@@ -28,12 +28,16 @@ This project will analyse the data of bikes which were used and shared from diff
    counts of each gender (only available for NYC and Chicago)
    earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
-
+5. raw data
+   upon asked by the user it will provide the first 5 lines of respective city chosen by the user.
 ### Files used
 chicago.csv
 new_york_city.csv
 washington.csv
 
 ### Credits
+I would like to thanks Udacity for providing me such good course with very detailed explanations of concepts throughout the course.
+It has also provided detailed guidelines and good mentorship to complete the project on time.
 
+websites like stack overflow also provided good insights while solving problems.
 
